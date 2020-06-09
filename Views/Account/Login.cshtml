@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+
+<h1> Login </h1>
+<div class="clear-loading spinner">
+    <span></span>
+</div>
+<div class="w3ls-login box box--big">
+    <!-- form starts here -->
+    <form action="verify" method="post">
+        <div class="agile-field-txt">
+            <label><i class="fa fa-user" aria-hidden="true"></i> Nombre de Usuario </label>
+            <input type="text" name="Name" placeholder="Ingrese Usuario" required="" />
+        </div>
+        <div class="agile-field-txt">
+            <label><i class="fa fa-unlock-alt" aria-hidden="true"></i> Contraseña </label>
+            <input type="password" name="Password" placeholder="Ingrese Contraseña" required="" id="myInput" />
+            <div class="agile_label">
+                <input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+                <label class="check" for="check3">Ver Contraseña</label>
+            </div>
+    </div>
+    <!-- script for show password -->
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <!-- //end script -->
+            <input type="submit" value="LOGIN">
+</form>
+</div>
+<!-- //form ends here -->
